@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/VectorLogo.svg" type="image/x-icon">
+    <link href="../dist/output.css" rel="stylesheet">
+    <title>Encryptor</title>
+</head>
+<body class="bg-black text-white box-border">
+  <div class="ml-5 mt-2 md:ml-8 md:mt-5 absolute">
+    <img src="./assets/VectorLogo.svg" alt="logo-alura" class="w-5 xl:w-10">
+  </div>
+
+  <div class="flex flex-col xl:flex-row xl:h-screen w-full 2xl:w-max justify-center items-center mx-auto">
+    <main class="flex-1 ml-0 lg:ml-20">
+      <div class="mt-14 absolute xl:mt-10"> 
+        <p class="text-xs text-gray-400 select-none">Seleciona el encriptado</p>
+        <select id="select" class=" bg-gray-700 text-xl font-serif w-40 mt-1">
+          <option value="1" selected>Secret</option>
+          <option value="2">Cesar</option>
+          <option value="3">Morse</option>
+        </select>
+      </div>
+      <div class="flex p-1 md:p-0 mt-5">
+        <textarea id="entrada" class="w-full md:w-[750px] h-96 block bg-transparent mt-20 text-2xl resize-none scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200" placeholder="Ingrese el texto aqui..."></textarea>
+      </div>
+
+      <div class="flex flex-col mt-5 ml-0 md:ml-5 lg:ml-0">
+        <div class="select-none">
+          <img src="./assets/VectorIcon.svg" alt="icon" class="absolute">
+          <p class="ml-5 text-xs text-gray-400">Letras sin acentos</p>
+        </div>
+      
+        <div class="mt-4">
+          <button id="encriptar" class="text-sm min-w-full md:min-w-fit px-20 md:px-32 py-4 mr-0 md:mr-10 lg:mr-2 bg-blue-950 rounded-2xl hover:bg-blue-900 border border-blue-950 font-semibold">Encriptar</button>
+          <button id="desencriptar" class="text-sm min-w-full md:min-w-fit mt-5 md:mt-0 px-20 md:px-32  py-4 bg-gray-500 rounded-2xl hover:bg-gray-400 text-blue-950 border border-blue-950 font-semibold">Desencriptar</button>
+        </div>
+      </div>
+    </main>
+
+    <aside class="bg-gray-100 mt-20 mb-5 mx-2 xl:my-5 xl:mr-10 p-4 flex flex-col md:h-80 gap-10 w-full xl:w-96 xl:h-fit justify-center items-center rounded-2xl">
+
+      <textarea id="salida" class="h-96 w-full text-black text-xl resize-none rounded-xl hidden scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200"></textarea>
+      <button id="copiar" class="mt-4 px-20 py-4 bg-black rounded-2xl hover:bg-gray-800 hidden">Copiar</button>
+
+      <div id="aside" class="text-center text-black select-none lg:my-10">
+        <img class="hidden xl:block" src="./assets/Muñeco.svg" alt="muñeco">
+        <div class="w-full md:w-80">
+          <p class="text-xl font-bold mt-4 w-52 mx-auto">Ningún mensaje fue encontrado</p>
+          <p class="mt-2">Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+<script src="./index.js"></script>
+</body>
+</html>
